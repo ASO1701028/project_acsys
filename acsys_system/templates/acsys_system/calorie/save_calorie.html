@@ -1,3 +1,4 @@
+{% extends 'index.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,8 +9,10 @@
 <div id="calorie_intake">
     <p>摂取カロリー</p>
     <form method="post">
-        <select name="food_select" id="foode_select">
-            <option></option>
+        <select name="food_select" id="food_select">
+{#            {% for food in foods %}#}
+{#                <option>{{ food.name }}</option>#}
+{#            {% endfor %}#}
         </select>
         <input type="text" id="selected_food">
     </form>
@@ -25,7 +28,9 @@
     <p>消費カロリー</p>
     <form method="post">
         <select name="motion_select" id="motion_select">
-            <option></option>
+{#            {% for motion in motions %}#}
+{#                <option>{{ motion.name }}</option>#}
+{#            {% endfor %}#}
         </select>
         <input type="text" id="selected_motion">
     </form>
@@ -41,6 +46,5 @@
     <p>今までの合計カロリーの差分は</p>
 {#  <p style="font-size: 24pt">{{selectedfood - selectedmotion}}だよ！</p>#}
 </div>
-
 </body>
 </html>
